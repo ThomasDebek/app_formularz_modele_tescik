@@ -23,6 +23,11 @@
     <%= f.label :author %><br>
     <%= f.text_field :author %>
   </div>
+   <div>
+    <%= f.fields_for :tags do |tag_builder| %>
+      <%= render 'tags_fields', :f => tag_builder %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
